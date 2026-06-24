@@ -1,467 +1,546 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aly Mahmoud — AI Engineer</title>
-<meta name="description" content="Aly Mahmoud — AI Engineering student building computer vision systems, RAG pipelines, and LLM agents.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aly Mahmoud — AI Engineer</title>
+  <meta name="description"
+    content="Aly Mahmoud — AI Engineering student building computer vision systems, RAG pipelines, and LLM agents.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- scanline overlay -->
-<div class="scan-overlay" aria-hidden="true"></div>
+  <!-- scanline overlay -->
+  <div class="scan-overlay" aria-hidden="true"></div>
 
-<!-- ============ NAV ============ -->
-<header class="nav" id="top">
-  <div class="nav-inner">
-    <a href="#top" class="nav-brand">
-      <span class="nav-brand-bracket">[</span>ALY_MAHMOUD<span class="nav-brand-bracket">]</span>
-    </a>
-    <nav class="nav-links">
-      <a href="#about"><span class="nav-tag">01</span>About</a>
-      <a href="#work"><span class="nav-tag">02</span>Work</a>
-      <a href="#stack"><span class="nav-tag">03</span>Stack</a>
-      <a href="#experience"><span class="nav-tag">04</span>Experience</a>
-      <a href="#contact"><span class="nav-tag">05</span>Contact</a>
-    </nav>
-    <a href="#contact" class="nav-cta">Get in touch</a>
-    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <div class="nav-mobile" id="navMobile">
-    <a href="#about">About</a>
-    <a href="#work">Work</a>
-    <a href="#stack">Stack</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact</a>
-  </div>
-</header>
-
-<!-- ============ HERO ============ -->
-<section class="hero">
-  <div class="hero-grid" aria-hidden="true"></div>
-  <div class="hero-inner">
-
-    <div class="hero-eyebrow">
-      <span class="dot-live"></span> AI ENGINEERING · CAIRO, EGYPT
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="top">
+    <div class="nav-inner">
+      <a href="#top" class="nav-brand">
+        <span class="nav-brand-bracket">[</span>ALY_MAHMOUD<span class="nav-brand-bracket">]</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#about"><span class="nav-tag">01</span>About</a>
+        <a href="#work"><span class="nav-tag">02</span>Work</a>
+        <a href="#stack"><span class="nav-tag">03</span>Stack</a>
+        <a href="#experience"><span class="nav-tag">04</span>Experience</a>
+        <a href="#contact"><span class="nav-tag">05</span>Contact</a>
+      </nav>
+      <a href="#contact" class="nav-cta">Get in touch</a>
+      <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-
-    <h1 class="hero-title">
-      I teach machines<br>
-      to <span class="hero-highlight">see</span><br>
-      and <span class="hero-highlight">reason</span>.
-    </h1>
-
-    <div class="hero-tags-row">
-      <span class="hero-tag-inline">class: vision · conf 0.98</span>
-      <span class="hero-tag-inline hero-tag-inline-alt">class: language · conf 0.94</span>
+    <div class="nav-mobile" id="navMobile">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#stack">Stack</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
     </div>
+  </header>
 
-    <p class="hero-sub">
-      Aly Mahmoud — AI Engineering student at Ain Shams University, building
-      real-time computer vision pipelines and retrieval-augmented LLM systems
-      that ship, not just notebooks that run once.
-    </p>
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-inner">
 
-    <div class="hero-actions">
-      <a href="#work" class="btn btn-primary">View detections <span class="btn-arrow">→</span></a>
-      <a href="/assets/Aly_Mahmoud_Resume.pdf" class="btn btn-ghost" download>Download résumé</a>
-    </div>
-
-    <div class="hero-readout">
-      <div class="readout-item"><span class="readout-num">3.7</span><span class="readout-label">GPA / 4.0</span></div>
-      <div class="readout-item"><span class="readout-num">22+1</span><span class="readout-label">players &amp; ref tracked, 1 system</span></div>
-      <div class="readout-item"><span class="readout-num">50K+</span><span class="readout-label">docs indexed, sub-second retrieval</span></div>
-      <div class="readout-item"><span class="readout-num">90%</span><span class="readout-label">accuracy, TF-IDF from scratch</span></div>
-    </div>
-  </div>
-
-  <!-- detection frame visual -->
-  <div class="hero-visual" aria-hidden="true">
-    <div class="detect-photo-frame">
-      <img src="assets/aly-hero.jpg" alt="" class="detect-photo">
-      <span class="detect-photo-label">ALY MAHMOUD · 0.99</span>
-      <span class="dp-corner dp-tl"></span>
-      <span class="dp-corner dp-tr"></span>
-      <span class="dp-corner dp-bl"></span>
-      <span class="dp-corner dp-br"></span>
-      <div class="dp-scan"></div>
-    </div>
-    <div class="detect-photo-tag detect-photo-tag-1">PLAYER · 0.91</div>
-    <div class="detect-photo-tag detect-photo-tag-2">BALL · 0.97</div>
-  </div>
-</section>
-
-<!-- ============ MARQUEE ============ -->
-<div class="marquee">
-  <div class="marquee-track">
-    <span>YOLOv8</span><span>·</span><span>RAG</span><span>·</span><span>LangChain</span><span>·</span>
-    <span>PyTorch</span><span>·</span><span>ByteTrack</span><span>·</span><span>FAISS</span><span>·</span>
-    <span>OpenCV</span><span>·</span><span>FastAPI</span><span>·</span>
-    <span>YOLOv8</span><span>·</span><span>RAG</span><span>·</span><span>LangChain</span><span>·</span>
-    <span>PyTorch</span><span>·</span><span>ByteTrack</span><span>·</span><span>FAISS</span><span>·</span>
-    <span>OpenCV</span><span>·</span><span>FastAPI</span><span>·</span>
-  </div>
-</div>
-
-<!-- ============ ABOUT ============ -->
-<section class="section about" id="about">
-  <div class="about-grid">
-    <div class="about-photo-wrap">
-      <div class="about-photo-frame">
-        <img src="assets/aly-about.jpg" alt="Aly Mahmoud" class="about-photo">
-        <span class="about-photo-tag">CLASS: ENGINEER · CONF 1.00</span>
-        <span class="ap-corner ap-tl"></span>
-        <span class="ap-corner ap-tr"></span>
-        <span class="ap-corner ap-bl"></span>
-        <span class="ap-corner ap-br"></span>
+      <div class="hero-eyebrow">
+        <span class="dot-live"></span> AI ENGINEERING · CAIRO, EGYPT
       </div>
-    </div>
-    <div class="about-copy">
-      <p class="section-eyebrow">Who's behind the boxes</p>
-      <h2 class="section-title about-title">Hi, I'm Aly.</h2>
-      <p class="about-lead">
-        I'm an AI Engineering student at Ain Shams University (and dual-degree
-        student at East London University), based in Cairo, Egypt.
+
+      <h1 class="hero-title">
+        I teach machines<br>
+        to <span class="hero-highlight">see</span><br>
+        and <span class="hero-highlight">reason</span>.
+      </h1>
+
+      <div class="hero-tags-row">
+        <span class="hero-tag-inline">class: vision · conf 0.98</span>
+        <span class="hero-tag-inline hero-tag-inline-alt">class: language · conf 0.94</span>
+      </div>
+
+      <p class="hero-sub">
+        Aly Mahmoud — AI Engineering student at Ain Shams University, building
+        real-time computer vision pipelines and retrieval-augmented LLM systems
+        that ship, not just notebooks that run once.
       </p>
-      <p>
-        I got into AI the way most people do — curious about how machines
-        could understand images and language — and stayed because I like
-        finishing things. Most of my projects start as "can this actually
-        work in real time?" and end as a working pipeline with real numbers
-        attached: 87% detection confidence, 25% better retrieval, 30% better
-        recall. I'd rather ship something measurable than polish a notebook
-        no one runs twice.
-      </p>
-      <p>
-        Outside of model training, I'm usually reading about new agent
-        architectures, tracing through someone else's GitHub repo, or
-        figuring out why my ID remapper just renamed the goalkeeper "player
-        #214" again.
-      </p>
-      <div class="about-actions">
-        <a href="#contact" class="btn btn-primary">Let's talk <span class="btn-arrow">→</span></a>
-        <a href="https://github.com/AlyModrik41" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
+
+      <div class="hero-actions">
+        <a href="#work" class="btn btn-primary">View detections <span class="btn-arrow">→</span></a>
+        <a href="/assets/Aly_Mahmoud_Resume.pdf" class="btn btn-ghost" download>Download résumé</a>
+      </div>
+
+      <div class="hero-readout">
+        <div class="readout-item"><span class="readout-num">3.7</span><span class="readout-label">GPA / 4.0</span></div>
+        <div class="readout-item"><span class="readout-num">22+1</span><span class="readout-label">players &amp; ref
+            tracked, 1 system</span></div>
+        <div class="readout-item"><span class="readout-num">50K+</span><span class="readout-label">docs indexed,
+            sub-second retrieval</span></div>
+        <div class="readout-item"><span class="readout-num">90%</span><span class="readout-label">accuracy, TF-IDF from
+            scratch</span></div>
       </div>
     </div>
+
+    <!-- detection frame visual -->
+    <div class="hero-visual" aria-hidden="true">
+      <div class="detect-photo-frame">
+        <img src="assets/aly-hero.jpg" alt="" class="detect-photo">
+        <span class="detect-photo-label">ALY MAHMOUD · 0.99</span>
+        <span class="dp-corner dp-tl"></span>
+        <span class="dp-corner dp-tr"></span>
+        <span class="dp-corner dp-bl"></span>
+        <span class="dp-corner dp-br"></span>
+        <div class="dp-scan"></div>
+      </div>
+      <div class="detect-photo-tag detect-photo-tag-1">PLAYER · 0.91</div>
+      <div class="detect-photo-tag detect-photo-tag-2">BALL · 0.97</div>
+    </div>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>YOLOv8</span><span>·</span><span>RAG</span><span>·</span><span>LangChain</span><span>·</span>
+      <span>PyTorch</span><span>·</span><span>ByteTrack</span><span>·</span><span>FAISS</span><span>·</span>
+      <span>OpenCV</span><span>·</span><span>FastAPI</span><span>·</span>
+      <span>YOLOv8</span><span>·</span><span>RAG</span><span>·</span><span>LangChain</span><span>·</span>
+      <span>PyTorch</span><span>·</span><span>ByteTrack</span><span>·</span><span>FAISS</span><span>·</span>
+      <span>OpenCV</span><span>·</span><span>FastAPI</span><span>·</span>
+    </div>
   </div>
-</section>
 
-<!-- ============ WORK ============ -->
-<section class="section" id="work">
-  <div class="section-head">
-    <p class="section-eyebrow">Selected detections</p>
-    <h2 class="section-title">Things I've built and shipped</h2>
-  </div>
+  <!-- ============ ABOUT ============ -->
+  <section class="section about" id="about">
+    <div class="about-grid">
+      <div class="about-photo-wrap">
+        <div class="about-photo-frame">
+          <img src="assets/aly-about.jpg" alt="Aly Mahmoud" class="about-photo">
+          <span class="about-photo-tag">CLASS: ENGINEER · CONF 1.00</span>
+          <span class="ap-corner ap-tl"></span>
+          <span class="ap-corner ap-tr"></span>
+          <span class="ap-corner ap-bl"></span>
+          <span class="ap-corner ap-br"></span>
+        </div>
+      </div>
+      <div class="about-copy">
+        <p class="section-eyebrow">Who's behind the boxes</p>
+        <h2 class="section-title about-title">Hi, I'm Aly.</h2>
+        <p class="about-lead">
+          I'm an AI Engineering student at Ain Shams University (and dual-degree
+          student at East London University), based in Cairo, Egypt.
+        </p>
+        <p>
+          I got into AI the way most people do — curious about how machines
+          could understand images and language — and stayed because I like
+          finishing things. Most of my projects start as "can this actually
+          work in real time?" and end as a working pipeline with real numbers
+          attached: 87% detection confidence, 25% better retrieval, 30% better
+          recall. I'd rather ship something measurable than polish a notebook
+          no one runs twice.
+        </p>
+        <p>
+          Outside of model training, I'm usually reading about new agent
+          architectures, tracing through someone else's GitHub repo, or
+          figuring out why my ID remapper just renamed the goalkeeper "player
+          #214" again.
+        </p>
+        <div class="about-actions">
+          <a href="#contact" class="btn btn-primary">Let's talk <span class="btn-arrow">→</span></a>
+          <a href="https://github.com/AlyModrik41" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <div class="project-list">
+  <!-- ============ WORK ============ -->
+  <section class="section" id="work">
+    <div class="section-head">
+      <p class="section-eyebrow">Selected detections</p>
+      <h2 class="section-title">Things I've built and shipped</h2>
+    </div>
 
-    <!-- Football Analysis -->
-    <article class="project">
-      <div class="project-tag">CLASS: COMPUTER_VISION</div>
-      <div class="project-grid">
-        <div class="project-info">
-          <h3>Football Analysis System</h3>
-          <p>An end-to-end CV pipeline that watches broadcast football footage and turns it into tactical data — who ran where, how fast, and who had the ball.</p>
-          <ul class="project-points">
-            <li>Dual YOLOv8x models track 22 players, 1 referee, and the ball across 1,750+ frames at 87%+ confidence.</li>
-            <li>A custom position-based ID remapper collapsed 800+ noisy track IDs down to 28 stable ones on top of ByteTrack.</li>
-            <li>Lucas-Kanade optical flow cancels camera motion; a perspective transform converts pixel space to real meters for accurate speed in km/h.</li>
-            <li>KMeans kit-color clustering auto-assigns teams and exports per-player distance, speed, touches, and possession to CSV.</li>
-          </ul>
-          <div class="project-stack">
-            <span>YOLOv8</span><span>OpenCV</span><span>ByteTrack</span><span>Optical Flow</span><span>KMeans</span>
+    <div class="project-list">
+
+      <!-- Football Analysis -->
+      <article class="project">
+        <div class="project-tag">CLASS: COMPUTER_VISION</div>
+        <div class="project-grid">
+          <div class="project-info">
+            <h3>Football Analysis System</h3>
+            <p>An end-to-end CV pipeline that watches broadcast football footage and turns it into tactical data — who
+              ran where, how fast, and who had the ball.</p>
+            <ul class="project-points">
+              <li>Dual YOLOv8x models track 22 players, 1 referee, and the ball across 1,750+ frames at 87%+ confidence.
+              </li>
+              <li>A custom position-based ID remapper collapsed 800+ noisy track IDs down to 28 stable ones on top of
+                ByteTrack.</li>
+              <li>Lucas-Kanade optical flow cancels camera motion; a perspective transform converts pixel space to real
+                meters for accurate speed in km/h.</li>
+              <li>KMeans kit-color clustering auto-assigns teams and exports per-player distance, speed, touches, and
+                possession to CSV.</li>
+            </ul>
+            <div class="project-stack">
+              <span>YOLOv8</span><span>OpenCV</span><span>ByteTrack</span><span>Optical Flow</span><span>KMeans</span>
+            </div>
+          </div>
+          <div class="project-visual">
+            <svg viewBox="0 0 300 220" class="pv-svg">
+              <rect x="0" y="0" width="300" height="220" rx="6" class="pv-field" />
+              <line x1="150" y1="0" x2="150" y2="220" class="pv-line" />
+              <circle cx="150" cy="110" r="28" class="pv-circle" />
+              <rect x="20" y="40" width="26" height="36" rx="3" class="pv-box pv-box-1" />
+              <rect x="200" y="120" width="26" height="36" rx="3" class="pv-box pv-box-2" />
+              <rect x="120" y="60" width="26" height="36" rx="3" class="pv-box pv-box-3" />
+              <circle cx="170" cy="100" r="5" class="pv-ball" />
+              <text x="20" y="34" class="pv-label">A · 24.1km/h</text>
+              <text x="200" y="114" class="pv-label pv-label-alt">B · 19.8km/h</text>
+            </svg>
           </div>
         </div>
-        <div class="project-visual">
-          <svg viewBox="0 0 300 220" class="pv-svg">
-            <rect x="0" y="0" width="300" height="220" rx="6" class="pv-field"/>
-            <line x1="150" y1="0" x2="150" y2="220" class="pv-line"/>
-            <circle cx="150" cy="110" r="28" class="pv-circle"/>
-            <rect x="20" y="40" width="26" height="36" rx="3" class="pv-box pv-box-1"/>
-            <rect x="200" y="120" width="26" height="36" rx="3" class="pv-box pv-box-2"/>
-            <rect x="120" y="60" width="26" height="36" rx="3" class="pv-box pv-box-3"/>
-            <circle cx="170" cy="100" r="5" class="pv-ball"/>
-            <text x="20" y="34" class="pv-label">A · 24.1km/h</text>
-            <text x="200" y="114" class="pv-label pv-label-alt">B · 19.8km/h</text>
-          </svg>
-        </div>
-      </div>
-      <a href="https://github.com/AlyModrik41/Football-Analysis-System" target="_blank" rel="noopener" class="project-link">View repository <span class="btn-arrow">→</span></a>
-    </article>
+        <a href="https://github.com/AlyModrik41/Football-Analysis-System" target="_blank" rel="noopener"
+          class="project-link">View repository <span class="btn-arrow">→</span></a>
+      </article>
 
-    <!-- RAG System -->
-    <article class="project project-reverse">
-      <div class="project-tag">CLASS: RETRIEVAL_AUGMENTED_GENERATION</div>
-      <div class="project-grid">
-        <div class="project-info">
-          <h3>RAG System</h3>
-          <p>A retrieval pipeline that grounds LLM answers in real documents instead of letting the model guess — built for speed and relevance at scale.</p>
-          <ul class="project-points">
-            <li>Indexes and queries 50,000+ documents through FAISS with sub-second retrieval latency.</li>
-            <li>Coarse-to-fine retrieval — a bi-encoder pass followed by reranking — lifted answer relevance by 25%.</li>
-            <li>Tuned chunking strategy and prompt design to cut hallucinations and sharpen response accuracy.</li>
-          </ul>
-          <div class="project-stack">
-            <span>FAISS</span><span>Sentence Transformers</span><span>FastAPI</span>
+      <!-- RAG System -->
+      <article class="project project-reverse">
+        <div class="project-tag">CLASS: RETRIEVAL_AUGMENTED_GENERATION</div>
+        <div class="project-grid">
+          <div class="project-info">
+            <h3>RAG System</h3>
+            <p>A retrieval pipeline that grounds LLM answers in real documents instead of letting the model guess —
+              built for speed and relevance at scale.</p>
+            <ul class="project-points">
+              <li>Indexes and queries 50,000+ documents through FAISS with sub-second retrieval latency.</li>
+              <li>Coarse-to-fine retrieval — a bi-encoder pass followed by reranking — lifted answer relevance by 25%.
+              </li>
+              <li>Tuned chunking strategy and prompt design to cut hallucinations and sharpen response accuracy.</li>
+            </ul>
+            <div class="project-stack">
+              <span>FAISS</span><span>Sentence Transformers</span><span>FastAPI</span>
+            </div>
+          </div>
+          <div class="project-visual">
+            <svg viewBox="0 0 300 220" class="pv-svg">
+              <rect x="0" y="0" width="300" height="220" rx="6" class="pv-field pv-field-dark" />
+              <circle cx="70" cy="60" r="4" class="pv-node" />
+              <circle cx="130" cy="40" r="4" class="pv-node" />
+              <circle cx="190" cy="70" r="4" class="pv-node" />
+              <circle cx="230" cy="120" r="4" class="pv-node" />
+              <circle cx="160" cy="150" r="4" class="pv-node" />
+              <circle cx="90" cy="140" r="4" class="pv-node" />
+              <circle cx="150" cy="100" r="7" class="pv-node pv-node-query" />
+              <line x1="150" y1="100" x2="70" y2="60" class="pv-edge" />
+              <line x1="150" y1="100" x2="130" y2="40" class="pv-edge" />
+              <line x1="150" y1="100" x2="190" y2="70" class="pv-edge pv-edge-strong" />
+              <line x1="150" y1="100" x2="230" y2="120" class="pv-edge" />
+              <line x1="150" y1="100" x2="160" y2="150" class="pv-edge pv-edge-strong" />
+              <line x1="150" y1="100" x2="90" y2="140" class="pv-edge" />
+              <text x="150" y="190" class="pv-label pv-label-center">QUERY → TOP-K · 0.0008s</text>
+            </svg>
           </div>
         </div>
-        <div class="project-visual">
-          <svg viewBox="0 0 300 220" class="pv-svg">
-            <rect x="0" y="0" width="300" height="220" rx="6" class="pv-field pv-field-dark"/>
-            <circle cx="70" cy="60" r="4" class="pv-node"/>
-            <circle cx="130" cy="40" r="4" class="pv-node"/>
-            <circle cx="190" cy="70" r="4" class="pv-node"/>
-            <circle cx="230" cy="120" r="4" class="pv-node"/>
-            <circle cx="160" cy="150" r="4" class="pv-node"/>
-            <circle cx="90" cy="140" r="4" class="pv-node"/>
-            <circle cx="150" cy="100" r="7" class="pv-node pv-node-query"/>
-            <line x1="150" y1="100" x2="70" y2="60" class="pv-edge"/>
-            <line x1="150" y1="100" x2="130" y2="40" class="pv-edge"/>
-            <line x1="150" y1="100" x2="190" y2="70" class="pv-edge pv-edge-strong"/>
-            <line x1="150" y1="100" x2="230" y2="120" class="pv-edge"/>
-            <line x1="150" y1="100" x2="160" y2="150" class="pv-edge pv-edge-strong"/>
-            <line x1="150" y1="100" x2="90" y2="140" class="pv-edge"/>
-            <text x="150" y="190" class="pv-label pv-label-center">QUERY → TOP-K · 0.0008s</text>
-          </svg>
-        </div>
-      </div>
-      <a href="https://github.com/AlyModrik41" target="_blank" rel="noopener" class="project-link">View repository <span class="btn-arrow">→</span></a>
-    </article>
+        <a href="https://github.com/AlyModrik41" target="_blank" rel="noopener" class="project-link">View repository
+          <span class="btn-arrow">→</span></a>
+      </article>
 
-    <!-- LLM Agents -->
-    <article class="project">
-      <div class="project-tag">CLASS: AGENTIC_LLM</div>
-      <div class="project-grid">
-        <div class="project-info">
-          <h3>LLM Agents with Tool Execution</h3>
-          <p>LLM-powered agents that don't just chat — they call APIs and Python functions to actually finish multi-step tasks.</p>
-          <ul class="project-points">
-            <li>ReAct-style reasoning loop drives dynamic decision-making and action execution across tasks.</li>
-            <li>Integrates external tools — search, APIs, scripts — to handle multi-step queries end to end.</li>
-            <li>Caching and optimized prompt design reduce response latency.</li>
-          </ul>
-          <div class="project-stack">
-            <span>LangChain</span><span>OpenAI API</span><span>FAISS</span>
+      <!-- LLM Agents -->
+      <article class="project">
+        <div class="project-tag">CLASS: AGENTIC_LLM</div>
+        <div class="project-grid">
+          <div class="project-info">
+            <h3>LLM Agents with Tool Execution</h3>
+            <p>LLM-powered agents that don't just chat — they call APIs and Python functions to actually finish
+              multi-step tasks.</p>
+            <ul class="project-points">
+              <li>ReAct-style reasoning loop drives dynamic decision-making and action execution across tasks.</li>
+              <li>Integrates external tools — search, APIs, scripts — to handle multi-step queries end to end.</li>
+              <li>Caching and optimized prompt design reduce response latency.</li>
+            </ul>
+            <div class="project-stack">
+              <span>LangChain</span><span>OpenAI API</span><span>FAISS</span>
+            </div>
+          </div>
+          <div class="project-visual">
+            <svg viewBox="0 0 300 220" class="pv-svg">
+              <rect x="0" y="0" width="300" height="220" rx="6" class="pv-field" />
+              <rect x="30" y="30" width="80" height="40" rx="4" class="pv-step pv-step-1" />
+              <text x="70" y="54" class="pv-step-label" text-anchor="middle">THINK</text>
+              <rect x="190" y="30" width="80" height="40" rx="4" class="pv-step pv-step-2" />
+              <text x="230" y="54" class="pv-step-label" text-anchor="middle">ACT</text>
+              <rect x="190" y="150" width="80" height="40" rx="4" class="pv-step pv-step-3" />
+              <text x="230" y="174" class="pv-step-label" text-anchor="middle">OBSERVE</text>
+              <rect x="30" y="150" width="80" height="40" rx="4" class="pv-step pv-step-1" />
+              <text x="70" y="174" class="pv-step-label" text-anchor="middle">REASON</text>
+              <line x1="110" y1="50" x2="190" y2="50" class="pv-arrow" />
+              <line x1="230" y1="70" x2="230" y2="150" class="pv-arrow" />
+              <line x1="190" y1="170" x2="110" y2="170" class="pv-arrow" />
+              <line x1="70" y1="150" x2="70" y2="70" class="pv-arrow pv-arrow-dash" />
+            </svg>
           </div>
         </div>
-        <div class="project-visual">
-          <svg viewBox="0 0 300 220" class="pv-svg">
-            <rect x="0" y="0" width="300" height="220" rx="6" class="pv-field"/>
-            <rect x="30" y="30" width="80" height="40" rx="4" class="pv-step pv-step-1"/>
-            <text x="70" y="54" class="pv-step-label" text-anchor="middle">THINK</text>
-            <rect x="190" y="30" width="80" height="40" rx="4" class="pv-step pv-step-2"/>
-            <text x="230" y="54" class="pv-step-label" text-anchor="middle">ACT</text>
-            <rect x="190" y="150" width="80" height="40" rx="4" class="pv-step pv-step-3"/>
-            <text x="230" y="174" class="pv-step-label" text-anchor="middle">OBSERVE</text>
-            <rect x="30" y="150" width="80" height="40" rx="4" class="pv-step pv-step-1"/>
-            <text x="70" y="174" class="pv-step-label" text-anchor="middle">REASON</text>
-            <line x1="110" y1="50" x2="190" y2="50" class="pv-arrow"/>
-            <line x1="230" y1="70" x2="230" y2="150" class="pv-arrow"/>
-            <line x1="190" y1="170" x2="110" y2="170" class="pv-arrow"/>
-            <line x1="70" y1="150" x2="70" y2="70" class="pv-arrow pv-arrow-dash"/>
-          </svg>
-        </div>
-      </div>
-      <a href="https://github.com/AlyModrik41" target="_blank" rel="noopener" class="project-link">View repository <span class="btn-arrow">→</span></a>
-    </article>
+        <a href="https://github.com/AlyModrik41/AI-Agent-System" target="_blank" rel="noopener"
+          class="project-link">View repository <span class="btn-arrow">→</span></a>
+      </article>
 
-    <!-- Sentiment Analysis -->
-    <article class="project project-reverse">
-      <div class="project-tag">CLASS: NATURAL_LANGUAGE_PROCESSING</div>
-      <div class="project-grid">
-        <div class="project-info">
-          <h3>Movie Reviews Sentiment Analysis</h3>
-          <p>A full NLP pipeline built to understand its own internals — including a TF-IDF vectorizer written from scratch in NumPy.</p>
-          <ul class="project-points">
-            <li>Cleaned and processed 50,000 IMDB reviews with tokenization, stopword removal, and POS-aware lemmatization.</li>
-            <li>Implemented TF-IDF vectorization from scratch in Python and NumPy, no scikit-learn vectorizer used.</li>
-            <li>Logistic Regression and SVM reached up to 90% accuracy on an 80/20 split.</li>
-          </ul>
-          <div class="project-stack">
-            <span>NLTK</span><span>Pandas</span><span>NumPy</span>
+      <!-- Sentiment Analysis -->
+      <article class="project project-reverse">
+        <div class="project-tag">CLASS: NATURAL_LANGUAGE_PROCESSING</div>
+        <div class="project-grid">
+          <div class="project-info">
+            <h3>Movie Reviews Sentiment Analysis</h3>
+            <p>A full NLP pipeline built to understand its own internals — including a TF-IDF vectorizer written from
+              scratch in NumPy.</p>
+            <ul class="project-points">
+              <li>Cleaned and processed 50,000 IMDB reviews with tokenization, stopword removal, and POS-aware
+                lemmatization.</li>
+              <li>Implemented TF-IDF vectorization from scratch in Python and NumPy, no scikit-learn vectorizer used.
+              </li>
+              <li>Logistic Regression and SVM reached up to 90% accuracy on an 80/20 split.</li>
+            </ul>
+            <div class="project-stack">
+              <span>NLTK</span><span>Pandas</span><span>NumPy</span>
+            </div>
+          </div>
+          <div class="project-visual">
+            <svg viewBox="0 0 300 220" class="pv-svg">
+              <rect x="0" y="0" width="300" height="220" rx="6" class="pv-field pv-field-dark" />
+              <rect x="30" y="160" width="20" height="30" class="pv-bar" />
+              <rect x="60" y="120" width="20" height="70" class="pv-bar" />
+              <rect x="90" y="60" width="20" height="130" class="pv-bar pv-bar-strong" />
+              <rect x="120" y="100" width="20" height="90" class="pv-bar" />
+              <rect x="150" y="150" width="20" height="40" class="pv-bar" />
+              <rect x="180" y="40" width="20" height="150" class="pv-bar pv-bar-strong" />
+              <rect x="210" y="130" width="20" height="60" class="pv-bar" />
+              <rect x="240" y="90" width="20" height="100" class="pv-bar" />
+              <text x="150" y="205" class="pv-label pv-label-center">TF-IDF WEIGHT BY TOKEN</text>
+            </svg>
           </div>
         </div>
-        <div class="project-visual">
-          <svg viewBox="0 0 300 220" class="pv-svg">
-            <rect x="0" y="0" width="300" height="220" rx="6" class="pv-field pv-field-dark"/>
-            <rect x="30" y="160" width="20" height="30" class="pv-bar"/>
-            <rect x="60" y="120" width="20" height="70" class="pv-bar"/>
-            <rect x="90" y="60" width="20" height="130" class="pv-bar pv-bar-strong"/>
-            <rect x="120" y="100" width="20" height="90" class="pv-bar"/>
-            <rect x="150" y="150" width="20" height="40" class="pv-bar"/>
-            <rect x="180" y="40" width="20" height="150" class="pv-bar pv-bar-strong"/>
-            <rect x="210" y="130" width="20" height="60" class="pv-bar"/>
-            <rect x="240" y="90" width="20" height="100" class="pv-bar"/>
-            <text x="150" y="205" class="pv-label pv-label-center">TF-IDF WEIGHT BY TOKEN</text>
-          </svg>
-        </div>
-      </div>
-      <a href="https://github.com/AlyModrik41/IMDB-Movie-Reviews" target="_blank" rel="noopener" class="project-link">View repository <span class="btn-arrow">→</span></a>
-    </article>
+        <a href="https://github.com/AlyModrik41/IMDB-Movie-Reviews" target="_blank" rel="noopener"
+          class="project-link">View repository <span class="btn-arrow">→</span></a>
+      </article>
 
-    <!-- ExoPlanet -->
-    <article class="project">
-      <div class="project-tag">CLASS: APPLIED_ML · NASA SPACE APPS</div>
-      <div class="project-grid">
-        <div class="project-info">
-          <h3>ExoPlanet Classification</h3>
-          <p>A full-stack web app that classifies candidate exoplanets from real NASA mission data, built for the NASA Space Apps Challenge.</p>
-          <ul class="project-points">
-            <li>Flask backend with a React + Tailwind frontend, trained on NASA's Kepler, K2, and TESS datasets.</li>
-            <li>95%+ accuracy, precision, and recall through careful preprocessing, skew resolution, and tuning.</li>
-            <li>Interactive dashboards with real-time prediction and notebook-driven analytics.</li>
-          </ul>
-          <div class="project-stack">
-            <span>Flask</span><span>React</span><span>Matplotlib</span><span>SQLite</span>
+      <!-- ExoPlanet -->
+      <article class="project">
+        <div class="project-tag">CLASS: APPLIED_ML · NASA SPACE APPS</div>
+        <div class="project-grid">
+          <div class="project-info">
+            <h3>ExoPlanet Classification</h3>
+            <p>A full-stack web app that classifies candidate exoplanets from real NASA mission data, built for the NASA
+              Space Apps Challenge.</p>
+            <ul class="project-points">
+              <li>Flask backend with a React + Tailwind frontend, trained on NASA's Kepler, K2, and TESS datasets.</li>
+              <li>95%+ accuracy, precision, and recall through careful preprocessing, skew resolution, and tuning.</li>
+              <li>Interactive dashboards with real-time prediction and notebook-driven analytics.</li>
+            </ul>
+            <div class="project-stack">
+              <span>Flask</span><span>React</span><span>Matplotlib</span><span>SQLite</span>
+            </div>
+          </div>
+          <div class="project-visual">
+            <svg viewBox="0 0 300 220" class="pv-svg">
+              <rect x="0" y="0" width="300" height="220" rx="6" class="pv-field" />
+              <circle cx="220" cy="60" r="3" class="pv-node" />
+              <circle cx="60" cy="40" r="2" class="pv-node" />
+              <circle cx="260" cy="160" r="2" class="pv-node" />
+              <circle cx="40" cy="170" r="2" class="pv-node" />
+              <circle cx="150" cy="110" r="34" class="pv-planet" />
+              <ellipse cx="150" cy="110" rx="55" ry="14" class="pv-orbit" />
+              <circle cx="205" cy="115" r="5" class="pv-moon" />
+              <text x="150" y="190" class="pv-label pv-label-center">CANDIDATE · CONFIRMED 0.96</text>
+            </svg>
           </div>
         </div>
-        <div class="project-visual">
-          <svg viewBox="0 0 300 220" class="pv-svg">
-            <rect x="0" y="0" width="300" height="220" rx="6" class="pv-field"/>
-            <circle cx="220" cy="60" r="3" class="pv-node"/>
-            <circle cx="60" cy="40" r="2" class="pv-node"/>
-            <circle cx="260" cy="160" r="2" class="pv-node"/>
-            <circle cx="40" cy="170" r="2" class="pv-node"/>
-            <circle cx="150" cy="110" r="34" class="pv-planet"/>
-            <ellipse cx="150" cy="110" rx="55" ry="14" class="pv-orbit"/>
-            <circle cx="205" cy="115" r="5" class="pv-moon"/>
-            <text x="150" y="190" class="pv-label pv-label-center">CANDIDATE · CONFIRMED 0.96</text>
-          </svg>
+        <a href="https://github.com/AlyModrik41/Exoplanets-Detection-Using-Machine-Learning" target="_blank"
+          rel="noopener" class="project-link">View repository
+          <span class="btn-arrow">→</span></a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ STACK ============ -->
+  <section class="section section-stack" id="stack">
+    <div class="section-head">
+      <p class="section-eyebrow">Confidence scores</p>
+      <h2 class="section-title">What I work with, and how comfortable I am</h2>
+    </div>
+
+    <div class="stack-grid">
+      <div class="stack-col">
+        <h4>Computer Vision</h4>
+        <div class="bar-row"><span>YOLO / Object Detection</span>
+          <div class="bar">
+            <div class="bar-fill" style="--v:95%"></div>
+          </div>
+        </div>
+        <div class="bar-row"><span>OpenCV</span>
+          <div class="bar">
+            <div class="bar-fill" style="--v:92%"></div>
+          </div>
+        </div>
+        <div class="bar-row"><span>Multi-Object Tracking (ByteTrack)</span>
+          <div class="bar">
+            <div class="bar-fill" style="--v:90%"></div>
+          </div>
+        </div>
+        <div class="bar-row"><span>GANs</span>
+          <div class="bar">
+            <div class="bar-fill" style="--v:75%"></div>
+          </div>
         </div>
       </div>
-      <a href="https://github.com/AlyModrik41" target="_blank" rel="noopener" class="project-link">View repository <span class="btn-arrow">→</span></a>
-    </article>
-
-  </div>
-</section>
-
-<!-- ============ STACK ============ -->
-<section class="section section-stack" id="stack">
-  <div class="section-head">
-    <p class="section-eyebrow">Confidence scores</p>
-    <h2 class="section-title">What I work with, and how comfortable I am</h2>
-  </div>
-
-  <div class="stack-grid">
-    <div class="stack-col">
-      <h4>Computer Vision</h4>
-      <div class="bar-row"><span>YOLO / Object Detection</span><div class="bar"><div class="bar-fill" style="--v:95%"></div></div></div>
-      <div class="bar-row"><span>OpenCV</span><div class="bar"><div class="bar-fill" style="--v:92%"></div></div></div>
-      <div class="bar-row"><span>Multi-Object Tracking (ByteTrack)</span><div class="bar"><div class="bar-fill" style="--v:90%"></div></div></div>
-      <div class="bar-row"><span>GANs</span><div class="bar"><div class="bar-fill" style="--v:75%"></div></div></div>
-    </div>
-    <div class="stack-col">
-      <h4>NLP &amp; LLMs</h4>
-      <div class="bar-row"><span>RAG / Vector Search (FAISS)</span><div class="bar"><div class="bar-fill" style="--v:93%"></div></div></div>
-      <div class="bar-row"><span>LangChain / Agents</span><div class="bar"><div class="bar-fill" style="--v:88%"></div></div></div>
-      <div class="bar-row"><span>Prompt Engineering</span><div class="bar"><div class="bar-fill" style="--v:90%"></div></div></div>
-      <div class="bar-row"><span>Sentence Transformers</span><div class="bar"><div class="bar-fill" style="--v:87%"></div></div></div>
-    </div>
-    <div class="stack-col">
-      <h4>ML &amp; Core</h4>
-      <div class="bar-row"><span>PyTorch / TensorFlow</span><div class="bar"><div class="bar-fill" style="--v:90%"></div></div></div>
-      <div class="bar-row"><span>Scikit-learn / XGBoost</span><div class="bar"><div class="bar-fill" style="--v:91%"></div></div></div>
-      <div class="bar-row"><span>Python</span><div class="bar"><div class="bar-fill" style="--v:96%"></div></div></div>
-      <div class="bar-row"><span>FastAPI / Streamlit</span><div class="bar"><div class="bar-fill" style="--v:89%"></div></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ EXPERIENCE ============ -->
-<section class="section" id="experience">
-  <div class="section-head">
-    <p class="section-eyebrow">Training log</p>
-    <h2 class="section-title">Experience &amp; education</h2>
-  </div>
-
-  <div class="timeline">
-
-    <div class="tl-item">
-      <div class="tl-meta">
-        <span class="tl-date">Jan – Feb 2026</span>
+      <div class="stack-col">
+        <h4>NLP &amp; LLMs</h4>
+        <div class="bar-row"><span>RAG / Vector Search (FAISS)</span>
+          <div class="bar">
+            <div class="bar-fill" style="--v:93%"></div>
+          </div>
+        </div>
+        <div class="bar-row"><span>LangChain / Agents</span>
+          <div class="bar">
+            <div class="bar-fill" style="--v:88%"></div>
+          </div>
+        </div>
+        <div class="bar-row"><span>Prompt Engineering</span>
+          <div class="bar">
+            <div class="bar-fill" style="--v:90%"></div>
+          </div>
+        </div>
+        <div class="bar-row"><span>Sentence Transformers</span>
+          <div class="bar">
+            <div class="bar-fill" style="--v:87%"></div>
+          </div>
+        </div>
       </div>
-      <div class="tl-body">
-        <h3>Computer Vision Trainee</h3>
-        <p class="tl-org">Instant X Orange — Giza, Egypt</p>
-        <ul>
-          <li>Built 5+ deep learning models spanning image classification, segmentation, and object detection.</li>
-          <li>Applied transfer learning across 3+ pre-trained architectures, including YOLO, for faster convergence and real-time detection.</li>
-          <li>Explored advanced CV techniques including GANs for image generation and data augmentation.</li>
-        </ul>
+      <div class="stack-col">
+        <h4>ML &amp; Core</h4>
+        <div class="bar-row"><span>PyTorch / TensorFlow</span>
+          <div class="bar">
+            <div class="bar-fill" style="--v:90%"></div>
+          </div>
+        </div>
+        <div class="bar-row"><span>Scikit-learn / XGBoost</span>
+          <div class="bar">
+            <div class="bar-fill" style="--v:91%"></div>
+          </div>
+        </div>
+        <div class="bar-row"><span>Python</span>
+          <div class="bar">
+            <div class="bar-fill" style="--v:96%"></div>
+          </div>
+        </div>
+        <div class="bar-row"><span>FastAPI / Streamlit</span>
+          <div class="bar">
+            <div class="bar-fill" style="--v:89%"></div>
+          </div>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="tl-item">
-      <div class="tl-meta">
-        <span class="tl-date">Aug – Sep 2025</span>
-      </div>
-      <div class="tl-body">
-        <h3>Machine Learning Intern</h3>
-        <p class="tl-org">Elevvo Pathways — Cairo, Egypt</p>
-        <ul>
-          <li>Architected 4 production-level ML pipelines in Streamlit for real-time predictive tools in finance and environmental sectors.</li>
-          <li>Designed full pipelines from preprocessing through deployment to simulate real industry workflows.</li>
-          <li>Improved model fairness with SMOTE and cross-validation, lifting minority-class recall by 30%.</li>
-        </ul>
-      </div>
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section" id="experience">
+    <div class="section-head">
+      <p class="section-eyebrow">Training log</p>
+      <h2 class="section-title">Experience &amp; education</h2>
     </div>
 
-    <div class="tl-item tl-item-edu">
-      <div class="tl-meta">
-        <span class="tl-date">Aug 2023 — Present</span>
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-meta">
+          <span class="tl-date">Jan – Feb 2026</span>
+        </div>
+        <div class="tl-body">
+          <h3>Computer Vision Trainee</h3>
+          <p class="tl-org">Instant X Orange — Giza, Egypt</p>
+          <ul>
+            <li>Built 5+ deep learning models spanning image classification, segmentation, and object detection.</li>
+            <li>Applied transfer learning across 3+ pre-trained architectures, including YOLO, for faster convergence
+              and real-time detection.</li>
+            <li>Explored advanced CV techniques including GANs for image generation and data augmentation.</li>
+          </ul>
+        </div>
       </div>
-      <div class="tl-body">
-        <h3>B.Sc. Computer Science, Specialized in AI</h3>
-        <p class="tl-org">Ain Shams University — Cairo, Egypt · CGPA 3.7</p>
+
+      <div class="tl-item">
+        <div class="tl-meta">
+          <span class="tl-date">Aug – Sep 2025</span>
+        </div>
+        <div class="tl-body">
+          <h3>Machine Learning Intern</h3>
+          <p class="tl-org">Elevvo Pathways — Cairo, Egypt</p>
+          <ul>
+            <li>Architected 4 production-level ML pipelines in Streamlit for real-time predictive tools in finance and
+              environmental sectors.</li>
+            <li>Designed full pipelines from preprocessing through deployment to simulate real industry workflows.</li>
+            <li>Improved model fairness with SMOTE and cross-validation, lifting minority-class recall by 30%.</li>
+          </ul>
+        </div>
       </div>
+
+      <div class="tl-item tl-item-edu">
+        <div class="tl-meta">
+          <span class="tl-date">Aug 2023 — Present</span>
+        </div>
+        <div class="tl-body">
+          <h3>B.Sc. Computer Science, Specialized in AI</h3>
+          <p class="tl-org">Ain Shams University — Cairo, Egypt · CGPA 3.7</p>
+        </div>
+      </div>
+
+      <div class="tl-item tl-item-edu">
+        <div class="tl-meta">
+          <span class="tl-date">Aug 2023 — Present</span>
+        </div>
+        <div class="tl-body">
+          <h3>B.Sc. Computer Science (Dual Degree)</h3>
+          <p class="tl-org">East London University — London, England</p>
+        </div>
+      </div>
+
     </div>
+  </section>
 
-    <div class="tl-item tl-item-edu">
-      <div class="tl-meta">
-        <span class="tl-date">Aug 2023 — Present</span>
-      </div>
-      <div class="tl-body">
-        <h3>B.Sc. Computer Science (Dual Degree)</h3>
-        <p class="tl-org">East London University — London, England</p>
-      </div>
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <div class="contact-frame" aria-hidden="true">
+      <span class="cf-corner cf-tl"></span>
+      <span class="cf-corner cf-tr"></span>
+      <span class="cf-corner cf-bl"></span>
+      <span class="cf-corner cf-br"></span>
     </div>
+    <p class="contact-tag">CLASS: AVAILABLE_FOR_HIRE · CONF 1.00</p>
+    <h2 class="contact-title">Let's build something<br>that ships.</h2>
+    <p class="contact-sub">Open to AI engineering roles, internships, and collaborations in computer vision and LLM
+      systems.</p>
+    <div class="contact-links">
+      <a href="mailto:ali1972014@gmail.com" class="contact-link-main">ali1972014@gmail.com</a>
+    </div>
+    <div class="contact-row">
+      <a href="https://github.com/AlyModrik41" target="_blank" rel="noopener" class="contact-pill">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/alyymahmoud/" target="_blank" rel="noopener" class="contact-pill">LinkedIn
+        ↗</a>
+      <a href="tel:+201014293585" class="contact-pill">+20 101 429 3585</a>
+    </div>
+  </section>
 
-  </div>
-</section>
+  <footer class="footer">
+    <span>© 2026 Aly Mahmoud</span>
+    <span class="footer-sep">·</span>
+    <span>Built with intent, no template.</span>
+  </footer>
 
-<!-- ============ CONTACT ============ -->
-<section class="contact" id="contact">
-  <div class="contact-frame" aria-hidden="true">
-    <span class="cf-corner cf-tl"></span>
-    <span class="cf-corner cf-tr"></span>
-    <span class="cf-corner cf-bl"></span>
-    <span class="cf-corner cf-br"></span>
-  </div>
-  <p class="contact-tag">CLASS: AVAILABLE_FOR_HIRE · CONF 1.00</p>
-  <h2 class="contact-title">Let's build something<br>that ships.</h2>
-  <p class="contact-sub">Open to AI engineering roles, internships, and collaborations in computer vision and LLM systems.</p>
-  <div class="contact-links">
-    <a href="mailto:ali1972014@gmail.com" class="contact-link-main">ali1972014@gmail.com</a>
-  </div>
-  <div class="contact-row">
-    <a href="https://github.com/AlyModrik41" target="_blank" rel="noopener" class="contact-pill">GitHub ↗</a>
-    <a href="https://www.linkedin.com/in/alyymahmoud/" target="_blank" rel="noopener" class="contact-pill">LinkedIn ↗</a>
-    <a href="tel:+201014293585" class="contact-pill">+20 101 429 3585</a>
-  </div>
-</section>
-
-<footer class="footer">
-  <span>© 2026 Aly Mahmoud</span>
-  <span class="footer-sep">·</span>
-  <span>Built with intent, no template.</span>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
