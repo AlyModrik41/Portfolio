@@ -12,10 +12,37 @@ style.css    → all styling (one theme, no framework)
 script.js    → mobile nav + scroll reveal + skill bar animation
 assets/
   Aly_Mahmoud_Resume.pdf  → linked from the "Download résumé" button
+  aly-hero.jpg            → placeholder photo in the hero section
+  aly-about.jpg           → placeholder photo in the About section
 ```
 
 No build step, no dependencies. It's plain HTML/CSS/JS, so it runs anywhere
 a static file can be served.
+
+## Adding your photos
+
+Two placeholder images are in `assets/` right now — green-bordered boxes
+that say "REPLACE ME" so it's obvious where they go and what size they
+expect:
+
+| File | Used in | Aspect ratio | Suggested size |
+|---|---|---|---|
+| `assets/aly-hero.jpg` | Hero section, right side | 3:4 (portrait) | ~900×1200px |
+| `assets/aly-about.jpg` | About section, left side | 4:5 (portrait) | ~900×1125px |
+
+To swap them in:
+
+1. Crop/export your photo to roughly that aspect ratio (doesn't have to be
+   exact — `object-fit: cover` will crop to fit, just avoid extreme
+   mismatches that cut off your head).
+2. Name the file exactly `aly-hero.jpg` or `aly-about.jpg` (or change the
+   `src=` in `index.html` if you'd rather use your own filenames/`.png`).
+3. Drop it into the `assets/` folder, replacing the placeholder, and
+   re-upload/push to your repo.
+
+Casual photos work well here — the design wraps them in a "detection frame"
+(corner brackets, a confidence-score tag) so even an informal photo reads as
+intentional, not like a stray headshot.
 
 ## Deploying to GitHub Pages (yourusername.github.io)
 
@@ -64,8 +91,9 @@ Then enable Pages as in step 3–4 above (Pages sometimes auto-enables for
 
 ## Before you deploy — quick checklist
 
-- [ ] Swap in your real headshot or remove the visual entirely if you'd
-      rather keep it abstract (it's currently pure SVG/CSS, no photo).
+- [ ] Replace `assets/aly-hero.jpg` and `assets/aly-about.jpg` with real
+      photos (see "Adding your photos" above) — they're currently green
+      placeholder boxes.
 - [ ] Double check the phone number and email in the contact section match
       what you want public (`ali1972014@gmail.com`, `+20 101 429 3585`).
 - [ ] The "View repository" links on Projects 2, 3, and 5 (RAG System, LLM

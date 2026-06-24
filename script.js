@@ -31,7 +31,7 @@ const barObserver = new IntersectionObserver((entries) => {
 bars.forEach(bar => barObserver.observe(bar));
 
 // ===== Fade-in for sections / projects on scroll =====
-const revealTargets = document.querySelectorAll('.project, .tl-item, .stack-col');
+const revealTargets = document.querySelectorAll('.project, .tl-item, .stack-col, .about-photo-wrap, .about-copy');
 
 revealTargets.forEach(el => {
   el.classList.add('reveal-ready');

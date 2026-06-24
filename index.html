@@ -22,10 +22,11 @@
       <span class="nav-brand-bracket">[</span>ALY_MAHMOUD<span class="nav-brand-bracket">]</span>
     </a>
     <nav class="nav-links">
-      <a href="#work"><span class="nav-tag">01</span>Work</a>
-      <a href="#stack"><span class="nav-tag">02</span>Stack</a>
-      <a href="#experience"><span class="nav-tag">03</span>Experience</a>
-      <a href="#contact"><span class="nav-tag">04</span>Contact</a>
+      <a href="#about"><span class="nav-tag">01</span>About</a>
+      <a href="#work"><span class="nav-tag">02</span>Work</a>
+      <a href="#stack"><span class="nav-tag">03</span>Stack</a>
+      <a href="#experience"><span class="nav-tag">04</span>Experience</a>
+      <a href="#contact"><span class="nav-tag">05</span>Contact</a>
     </nav>
     <a href="#contact" class="nav-cta">Get in touch</a>
     <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
@@ -33,6 +34,7 @@
     </button>
   </div>
   <div class="nav-mobile" id="navMobile">
+    <a href="#about">About</a>
     <a href="#work">Work</a>
     <a href="#stack">Stack</a>
     <a href="#experience">Experience</a>
@@ -81,18 +83,17 @@
 
   <!-- detection frame visual -->
   <div class="hero-visual" aria-hidden="true">
-    <svg viewBox="0 0 360 320" class="detect-svg">
-      <rect x="25" y="35" width="125" height="150" rx="4" class="box box-a"/>
-      <text x="25" y="27" class="box-label box-label-a">PLAYER · 0.91</text>
-
-      <rect x="205" y="55" width="115" height="170" rx="4" class="box box-c"/>
-      <text x="205" y="47" class="box-label box-label-c">PLAYER · 0.88</text>
-
-      <rect x="135" y="235" width="55" height="55" rx="3" class="box box-b"/>
-      <text x="135" y="227" class="box-label box-label-b">BALL · 0.97</text>
-
-      <line x1="0" y1="0" x2="360" y2="0" class="scan-line"/>
-    </svg>
+    <div class="detect-photo-frame">
+      <img src="assets/aly-hero.jpg" alt="" class="detect-photo">
+      <span class="detect-photo-label">ALY MAHMOUD · 0.99</span>
+      <span class="dp-corner dp-tl"></span>
+      <span class="dp-corner dp-tr"></span>
+      <span class="dp-corner dp-bl"></span>
+      <span class="dp-corner dp-br"></span>
+      <div class="dp-scan"></div>
+    </div>
+    <div class="detect-photo-tag detect-photo-tag-1">PLAYER · 0.91</div>
+    <div class="detect-photo-tag detect-photo-tag-2">BALL · 0.97</div>
   </div>
 </section>
 
@@ -107,6 +108,49 @@
     <span>OpenCV</span><span>·</span><span>FastAPI</span><span>·</span>
   </div>
 </div>
+
+<!-- ============ ABOUT ============ -->
+<section class="section about" id="about">
+  <div class="about-grid">
+    <div class="about-photo-wrap">
+      <div class="about-photo-frame">
+        <img src="assets/aly-about.jpg" alt="Aly Mahmoud" class="about-photo">
+        <span class="about-photo-tag">CLASS: ENGINEER · CONF 1.00</span>
+        <span class="ap-corner ap-tl"></span>
+        <span class="ap-corner ap-tr"></span>
+        <span class="ap-corner ap-bl"></span>
+        <span class="ap-corner ap-br"></span>
+      </div>
+    </div>
+    <div class="about-copy">
+      <p class="section-eyebrow">Who's behind the boxes</p>
+      <h2 class="section-title about-title">Hi, I'm Aly.</h2>
+      <p class="about-lead">
+        I'm an AI Engineering student at Ain Shams University (and dual-degree
+        student at East London University), based in Cairo, Egypt.
+      </p>
+      <p>
+        I got into AI the way most people do — curious about how machines
+        could understand images and language — and stayed because I like
+        finishing things. Most of my projects start as "can this actually
+        work in real time?" and end as a working pipeline with real numbers
+        attached: 87% detection confidence, 25% better retrieval, 30% better
+        recall. I'd rather ship something measurable than polish a notebook
+        no one runs twice.
+      </p>
+      <p>
+        Outside of model training, I'm usually reading about new agent
+        architectures, tracing through someone else's GitHub repo, or
+        figuring out why my ID remapper just renamed the goalkeeper "player
+        #214" again.
+      </p>
+      <div class="about-actions">
+        <a href="#contact" class="btn btn-primary">Let's talk <span class="btn-arrow">→</span></a>
+        <a href="https://github.com/AlyModrik41" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ============ WORK ============ -->
 <section class="section" id="work">
